@@ -1,6 +1,6 @@
 import React from "react";
 
-function Banner({ type, answer, guessIndex }) {
+function Banner({ type, answer, guessIndex, handleRestartGame }) {
   return (
     <div className={`${type} banner`}>
       {type === "sad" ? (
@@ -13,6 +13,8 @@ function Banner({ type, answer, guessIndex }) {
           <strong> {guessIndex} guesses</strong>.
         </p>
       )}
+
+      <button onClick={() => handleRestartGame()}>Restart Game</button>
     </div>
   );
 }
